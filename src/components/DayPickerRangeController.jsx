@@ -929,7 +929,7 @@ export default class DayPickerRangeController extends React.PureComponent {
     this.setState({
       currentMonth: newCurrentMonth,
       disablePrev: this.shouldDisableMonthNavigation(minDate, newCurrentMonth),
-      disableNext: this.shouldDisableMonthNavigation(maxDate, newCurrentMonth),
+      disableNext: this.shouldDisableMonthNavigation(newCurrentMonth, maxDate),
       visibleDays: {
         ...newVisibleDays,
         ...this.getModifiers(prevMonthVisibleDays),
@@ -960,7 +960,7 @@ export default class DayPickerRangeController extends React.PureComponent {
     this.setState({
       currentMonth: newCurrentMonth,
       disablePrev: this.shouldDisableMonthNavigation(minDate, newCurrentMonth),
-      disableNext: this.shouldDisableMonthNavigation(maxDate, newCurrentMonth),
+      disableNext: this.shouldDisableMonthNavigation(newCurrentMonth, maxDate),
       visibleDays: {
         ...newVisibleDays,
         ...this.getModifiers(nextMonthVisibleDays),
