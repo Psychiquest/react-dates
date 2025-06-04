@@ -226,7 +226,6 @@ function DateRangePickerInput({
         styles.DateRangePickerInput,
         disabled && styles.DateRangePickerInput__disabled,
         isRTL && styles.DateRangePickerInput__rtl,
-        !noBorder && styles.DateRangePickerInput__withBorder,
         block && styles.DateRangePickerInput__block,
         showClearDates && styles.DateRangePickerInput__showClearDates,
       )}
@@ -320,7 +319,7 @@ function DateRangePickerInput({
 DateRangePickerInput.propTypes = propTypes;
 DateRangePickerInput.defaultProps = defaultProps;
 
-export default withStyles(({ reactDates: { border, color, sizing } }) => ({
+export default withStyles(({ reactDates: { color, sizing } }) => ({
   DateRangePickerInput: {
     backgroundColor: color.background,
     display: 'inline-block',
@@ -328,13 +327,6 @@ export default withStyles(({ reactDates: { border, color, sizing } }) => ({
 
   DateRangePickerInput__disabled: {
     background: color.disabled,
-  },
-
-  DateRangePickerInput__withBorder: {
-    borderColor: color.border,
-    borderWidth: border.pickerInput.borderWidth,
-    borderStyle: border.pickerInput.borderStyle,
-    borderRadius: border.pickerInput.borderRadius,
   },
 
   DateRangePickerInput__rtl: {
